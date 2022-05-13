@@ -17,7 +17,8 @@ def index():
   return render_template(
     'homepage.html',
     posts=posts,
-    loggedIn=session.get('loggedIn')
+    loggedIn=session.get('loggedIn'),
+    home=True
   )
 
 @bp.route('/login')
@@ -38,5 +39,6 @@ def single(id):
   return render_template(
     'single-post.html',
     post=post,
-    loggedIn=session.get('loggedIn')
+    loggedIn=session.get('loggedIn'),
+    home=False
   )
