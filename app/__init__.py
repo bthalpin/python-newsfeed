@@ -27,3 +27,6 @@ def create_app(test_config=None):
   init_db(app)
 
   return app
+
+if __name__=='__main__':
+  create_app()
